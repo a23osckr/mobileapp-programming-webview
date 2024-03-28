@@ -15,10 +15,12 @@ public class MainActivity extends AppCompatActivity {
     private WebView myWebView;
     public void showExternalWebPage(){
         // TODO: Add your code for showing external web page here
+        myWebView.loadUrl("https://his.se");
     }
 
     public void showInternalWebPage(){
         // TODO: Add your code for showing internal web page here
+        myWebView.loadUrl("file:///android_asset/about.html");
     }
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         myWebView = findViewById(R.id.my_WebView);
         myWebView.setWebViewClient(new WebViewClient());
         myWebView.getSettings().setJavaScriptEnabled(true);
+        myWebView.loadUrl("https://his.se");
 
         /*
         * Rename your App. Tip: Values->Strings
